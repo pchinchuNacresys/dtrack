@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+
+# Django
+*.log
+db.sqlite3
+staticfiles/
+media/
+
+# Django migrations (optional – remove if you want to keep them)
+**/migrations/__pycache__/
+**/migrations/*.pyc
+
+# Environment & secrets
+.env
+tatmeen_token.json
+
+# IDEs & editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test / coverage
+.coverage
+htmlcov/
+
+# API docs output (if generated)
+generated_api_docs/
