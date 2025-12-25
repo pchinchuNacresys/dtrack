@@ -1,0 +1,297 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:urn="urn:sap-com:document:sap:soap:functions:mc-style">
+    <soap:Header/>
+    <soap:Body>
+        <epcis:EPCISDocument schemaVersion="1.2" creationDate="2021-01-28T07:21:26Z" xmlns:sbdh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:epcis="urn:epcglobal:epcis:xsd:1" xmlns:cbvmda="urn:epcglobal:cbv:mda" xmlns:tatmeen="http://tatmeen.ae/epcis/">
+            <EPCISHeader>
+                <sbdh:StandardBusinessDocumentHeader>
+                    <sbdh:HeaderVersion>1.3</sbdh:HeaderVersion>
+                    <sbdh:Sender>
+                        <sbdh:Identifier Authority="GS1">xxxxxxxxxxxxx</sbdh:Identifier>
+                    </sbdh:Sender>
+                    <sbdh:Receiver>
+                        <sbdh:Identifier Authority="GS1">xxxxxxxxxxxxx</sbdh:Identifier>
+                    </sbdh:Receiver>
+                    <sbdh:DocumentIdentification>
+                        <sbdh:Standard>EPCGlobal</sbdh:Standard>
+                        <sbdh:TypeVersion>1.0</sbdh:TypeVersion>
+                        <sbdh:InstanceIdentifier>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</sbdh:InstanceIdentifier>
+                        <sbdh:Type>Events</sbdh:Type>
+                        <sbdh:CreationDateAndTime>2021-05-31T12:02:05.000Z </sbdh:CreationDateAndTime></sbdh:DocumentIdentification>
+						</sbdh:StandardBusinessDocumentHeader>
+                    </EPCISHeader>
+                    <EPCISBody>
+                        <EventList>
+                            <ObjectEvent>
+                                <!--Commissioning of SGTIN's/PRODUCTS-->
+                                <eventTime>2021-05-31T12:02:11.000Z</eventTime>
+                                <eventTimeZoneOffset>+05:30</eventTimeZoneOffset>
+                                <epcList>
+                                    <epc>urn:epc:id:sgtin:xxxxxxxx.06987.7713101</epc>
+                                </epcList>
+                                <action>ADD</action>
+                                <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
+                                <disposition>urn:epcglobal:cbv:disp:active</disposition>
+                                <readPoint>
+                                    <id>urn:epc:id:sgln:xxxxxxxx.2244.0</id>
+                                </readPoint>
+                                <bizLocation>
+                                    <id>urn:epc:id:sgln:xxxxxxxx.2244.0</id>
+                                </bizLocation>
+                                <extension>
+                                    <ilmd>
+                                        <cbvmda:lotNumber>xxxxxxxxxxxxx</cbvmda:lotNumber>
+                                        <cbvmda:itemExpirationDate>2023-02-28</cbvmda:itemExpirationDate>
+                                    </ilmd>
+                                </extension>
+                                <tatmeen:lotManufacturingDate>2022-01-15</tatmeen:lotManufacturingDate>
+                                <tatmeen:manufacturingOrigin>I</tatmeen:manufacturingOrigin>
+                                <tatmeen:shipmentPermit>SHP/MP/48913/2020</tatmeen:shipmentPermit>
+                            </ObjectEvent>
+                            <ObjectEvent>
+                                <!-- COMMISSION EVENT FOR SHIPPER CASES -->
+                                <eventTime>2021-05-31T12:02:15.000Z</eventTime>
+                                <eventTimeZoneOffset>+05:30</eventTimeZoneOffset>
+                                <epcList>
+                                    <epc>urn:epc:id:sgtin:xxxxxxxx.06983.7713101</epc>
+                                </epcList>
+                                <action>ADD</action>
+                                <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
+                                <disposition>urn:epcglobal:cbv:disp:active</disposition>
+                                <readPoint>
+                                     <id>urn:epc:id:sgln:xxxxxxxx.2244.0</id>
+                                </readPoint>
+                                <bizLocation>
+                                     <id>urn:epc:id:sgln:xxxxxxxx.2244.0</id>
+                                </bizLocation>
+                                <extension>
+                                    <ilmd>
+                                        <cbvmda:lotNumber>LOTMA0104D</cbvmda:lotNumber>
+                                        <cbvmda:itemExpirationDate>2023-02-28</cbvmda:itemExpirationDate>
+                                    </ilmd>
+                                </extension>
+                                <tatmeen:lotManufacturingDate>2022-01-15</tatmeen:lotManufacturingDate>
+                                <tatmeen:manufacturingOrigin>I</tatmeen:manufacturingOrigin>
+                                <tatmeen:shipmentPermit>SHP/MP/48913/2020</tatmeen:shipmentPermit>
+                            </ObjectEvent>
+                            <ObjectEvent>
+                                <!--Commissioning of SSCC/PALLET-->
+                                <eventTime>2021-05-31T12:02:20.000Z</eventTime>
+                                <eventTimeZoneOffset>+05:30</eventTimeZoneOffset>
+                                <epcList>
+                                
+                                    <epc>urn:epc:id:sscc:xxxxxxxx.217248828</epc>
+                                </epcList>
+                                <action>ADD</action>
+                                <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
+                                <disposition>urn:epcglobal:cbv:disp:active</disposition>
+                                <readPoint>
+                                   <id>urn:epc:id:sgln:xxxxxxxx.2244.0</id>
+                                </readPoint>
+                                <bizLocation>
+                                   <id>urn:epc:id:sgln:xxxxxxxx.2244.0</id>
+                                </bizLocation>
+                            </ObjectEvent>
+                            <AggregationEvent>
+                                <!-- AGGREGATION OF EACHES INTO CASE-->
+                                <eventTime>2021-05-31T12:02:16.000Z</eventTime>
+                                <eventTimeZoneOffset>+05:30</eventTimeZoneOffset>
+                                <parentID>urn:epc:id:sgtin:xxxxxxxx.06983.7713101</parentID>
+                                <childEPCs>
+                                    <epc>urn:epc:id:sgtin:xxxxxxxx.06987.7713101</epc>
+                                </childEPCs>
+                                <action>ADD</action>
+                                <bizStep>urn:epcglobal:cbv:bizstep:packing</bizStep>
+                                <readPoint>
+                                    <id>urn:epc:id:sgln:xxxxxxxx.2244.0</id>
+                                </readPoint>
+                                <bizLocation>
+                                    <id>urn:epc:id:sgln:xxxxxxxx.2244.0</id>
+                                </bizLocation>
+                            </AggregationEvent>
+                            <AggregationEvent>
+                                <!-- AGGREGATION OF CASE INTO A PALLET-->
+                                <eventTime>2021-05-31T12:02:22.000Z</eventTime>
+                                <eventTimeZoneOffset>+05:30</eventTimeZoneOffset>
+                                <parentID>urn:epc:id:sscc:xxxxxxxx.217248828</parentID>
+                                <childEPCs>
+                                    <epc>urn:epc:id:sgtin:xxxxxxxx.06983.7713101</epc>
+                                </childEPCs>
+                                <action>ADD</action>
+                                <bizStep>urn:epcglobal:cbv:bizstep:packing</bizStep>
+                                <readPoint>
+                                    <id>urn:epc:id:sgln:xxxxxxxx.2244.0</id>
+                                </readPoint>
+                                <bizLocation>
+                                  <id>urn:epc:id:sgln:xxxxxxxx.2244.0</id>
+                                </bizLocation>
+                            </AggregationEvent>
+                            <ObjectEvent>
+                                <!-- Shipping Event -->
+                                <eventTime>2021-05-31T12:02:25.000Z</eventTime>
+                                <eventTimeZoneOffset>+05:30</eventTimeZoneOffset>
+                                <epcList>
+                                    <epc>urn:epc:id:sscc:xxxxxxxx.217248828</epc>
+                                </epcList>
+                                <action>OBSERVE</action>
+                                <bizStep>urn:epcglobal:cbv:bizstep:shipping</bizStep>
+                                <disposition>urn:epcglobal:cbv:disp:in_transit</disposition>
+                                <readPoint>
+                                    <id>urn:epc:id:sgln:xxxxxxxx.2244.0</id>
+                                </readPoint>
+                                <bizLocation>
+                                    <id>urn:epc:id:sgln:xxxxxxxx.2244.0</id>
+                                </bizLocation>
+                                <bizTransactionList>
+                                    <bizTransaction type="urn:epcglobal:cbv:btt:desadv">urn:epcglobal:cbv:bt:xxxxxxxx00000:Ship_Ref_MA140</bizTransaction>
+                                </bizTransactionList>
+                                <extension>
+                                    <sourceList>
+                                        <source type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:sgln:xxxxxxxx.2244.0</source>
+                                    </sourceList>
+                                    <destinationList>
+                                        <destination type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:sgln:xxxxxxxx.0000.0</destination>
+                                        <destination type="urn:epcglobal:cbv:sdt:location">urn:epc:id:sgln:xxxxxxxx.0000.0</destination>
+                                    </destinationList>
+                                </extension>
+                            </ObjectEvent>
+                        </EventList>
+                    </EPCISBody>
+                </epcis:EPCISDocument>
+            </soap:Body>
+        </soap:Envelope>
+
+
+####################################################################################
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:urn="urn:sap-com:document:sap:soap:functions:mc-style">
+    <soap:Header/>
+    <soap:Body>
+        <epcis:EPCISDocument schemaVersion="1.2" creationDate="2025-04-18T06:50:00Z" xmlns:sbdh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:epcis="urn:epcglobal:epcis:xsd:1" xmlns:cbvmda="urn:epcglobal:cbv:mda" xmlns:tatmeen="http://tatmeen.ae/epcis/">
+            <EPCISHeader>
+                <sbdh:StandardBusinessDocumentHeader>
+                    <sbdh:HeaderVersion>1.3</sbdh:HeaderVersion>
+                    <sbdh:Sender>
+                        <sbdh:Identifier Authority="GS1">6297001118115</sbdh:Identifier>
+                    </sbdh:Sender>
+                    <sbdh:Receiver>
+                        <sbdh:Identifier Authority="GS1">6297001273036</sbdh:Identifier>
+                    </sbdh:Receiver>
+                    <sbdh:DocumentIdentification>
+                        <sbdh:Standard>EPCGlobal</sbdh:Standard>
+                        <sbdh:TypeVersion>1.0</sbdh:TypeVersion>
+                        <sbdh:InstanceIdentifier>Me5OMC1Ta4eCt8RXPe7RlnThtToRcBj61Etp3068</sbdh:InstanceIdentifier>
+                        <sbdh:Type>Events</sbdh:Type>
+                        <sbdh:CreationDateAndTime>2021-05-31T12:02:05.000Z</sbdh:CreationDateAndTime>
+                    </sbdh:DocumentIdentification>
+                </sbdh:StandardBusinessDocumentHeader>
+            </EPCISHeader>
+            <EPCISBody>
+                <EventList>
+
+                    <!-- ObjectEvent: Commission SGTIN -->
+                    <ObjectEvent>
+                        <eventTime>2025-04-18T06:45:00.000Z</eventTime>
+                        <eventTimeZoneOffset>+04:00</eventTimeZoneOffset>
+                        <epcList>
+                            <epc>urn:epc:id:sgtin:4030539.006646.0000000017</epc>
+                        </epcList>
+                        <action>ADD</action>
+                        <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
+                        <disposition>urn:epcglobal:cbv:disp:active</disposition>
+                        <readPoint>
+                            <id>urn:epc:id:sgln:6297001118.11.115</id>
+                        </readPoint>
+                        <bizLocation>
+                            <id>urn:epc:id:sgln:6297001118.11.115</id>
+                        </bizLocation>
+                        <extension>
+                            <ilmd>
+                                <cbvmda:lotNumber>LOT250338076</cbvmda:lotNumber>
+                                <cbvmda:itemExpirationDate>2027-12-31</cbvmda:itemExpirationDate>
+                            </ilmd>
+                        </extension>
+                        <tatmeen:lotManufacturingDate>2024-12-01</tatmeen:lotManufacturingDate>
+                        <tatmeen:manufacturingOrigin>I</tatmeen:manufacturingOrigin>
+                        <tatmeen:shipmentPermit>SHP/MP/2505576/2025</tatmeen:shipmentPermit>
+                    </ObjectEvent>
+
+                    <!-- ObjectEvent: Commission SSCC (Shipper Case) -->
+                    <ObjectEvent>
+                        <eventTime>2025-04-18T06:45:00.000Z</eventTime>
+                        <eventTimeZoneOffset>+04:00</eventTimeZoneOffset>
+                        <epcList>
+                            <epc>urn:epc:id:sscc:6297001118.0000000017</epc>
+                        </epcList>
+                        <action>ADD</action>
+                        <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
+                        <disposition>urn:epcglobal:cbv:disp:active</disposition>
+                        <readPoint>
+                            <id>urn:epc:id:sgln:6297001118.11.115</id>
+                        </readPoint>
+                        <bizLocation>
+                            <id>urn:epc:id:sgln:6297001118.11.115</id>
+                        </bizLocation>
+                        <extension>
+                            <ilmd>
+                                <cbvmda:lotNumber>LOT250338076</cbvmda:lotNumber>
+                                <cbvmda:itemExpirationDate>2027-12-31</cbvmda:itemExpirationDate>
+                            </ilmd>
+                        </extension>
+                        <tatmeen:lotManufacturingDate>2024-12-01</tatmeen:lotManufacturingDate>
+                        <tatmeen:manufacturingOrigin>I</tatmeen:manufacturingOrigin>
+                        <tatmeen:shipmentPermit>SHP/MP/2505576/2025</tatmeen:shipmentPermit>
+                    </ObjectEvent>
+
+                    <!-- Aggregation: Eaches into Case -->
+                    <AggregationEvent>
+                        <eventTime>2025-04-18T06:46:00.000Z</eventTime>
+                        <eventTimeZoneOffset>+04:00</eventTimeZoneOffset>
+                        <parentID>urn:epc:id:sscc:6297001118.0000000017</parentID>
+                        <childEPCs>
+                            <epc>urn:epc:id:sgtin:4030539.006646.0000000017</epc>
+                        </childEPCs>
+                        <action>ADD</action>
+                        <bizStep>urn:epcglobal:cbv:bizstep:packing</bizStep>
+                        <readPoint>
+                            <id>urn:epc:id:sgln:6297001118.11.115</id>
+                        </readPoint>
+                        <bizLocation>
+                            <id>urn:epc:id:sgln:6297001118.11.115</id>
+                        </bizLocation>
+                    </AggregationEvent>
+
+                    <!-- ObjectEvent: Shipping -->
+                    <ObjectEvent>
+                        <eventTime>2025-04-18T06:47:00.000Z</eventTime>
+                        <eventTimeZoneOffset>+04:00</eventTimeZoneOffset>
+                        <epcList>
+                            <epc>urn:epc:id:sscc:6297001118.0000000017</epc>
+                        </epcList>
+                        <action>OBSERVE</action>
+                        <bizStep>urn:epcglobal:cbv:bizstep:shipping</bizStep>
+                        <disposition>urn:epcglobal:cbv:disp:in_transit</disposition>
+                        <readPoint>
+                            <id>urn:epc:id:sgln:6297001118.11.115</id>
+                        </readPoint>
+                        <bizLocation>
+                            <id>urn:epc:id:sgln:6297001118.11.115</id>
+                        </bizLocation>
+                        <bizTransactionList>
+                            <bizTransaction type="urn:epcglobal:cbv:btt:desadv">urn:epcglobal:cbv:bt:62970011180000:Ship_Ref_MA140</bizTransaction>
+                        </bizTransactionList>
+                        <extension>
+                            <sourceList>
+                                <source type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:sgln:6297001118.11.115</source>
+                            </sourceList>
+                            <destinationList>
+                                <destination type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:sgln:6297001273.03.6</destination>
+                                <destination type="urn:epcglobal:cbv:sdt:location">urn:epc:id:sgln:6297001273.03.6</destination>
+                            </destinationList>
+                        </extension>
+                    </ObjectEvent>
+
+                </EventList>
+            </EPCISBody>
+        </epcis:EPCISDocument>
+    </soap:Body>
+</soap:Envelope>
