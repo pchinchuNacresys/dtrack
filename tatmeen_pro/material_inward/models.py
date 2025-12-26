@@ -966,32 +966,6 @@ class shipping_guid_map(models.Model):
         db_table = 'shipping_guid_map'
 
 
-# class TempReceiveScanDetails(models.Model):
-#     ScanID = models.AutoField(primary_key=True)
-#     UUID=models.CharField(max_length=255)
-#     SSCC = models.CharField(max_length=18)
-#     SenderGLN = models.CharField(max_length=20)
-#     ReceiverGLN = models.CharField(max_length=20)
-#     SupplierGLN = models.CharField(max_length=20)
-#     EventTime = models.DateTimeField()
-#     rec_status=models.IntegerField() 
-#     created_at = models.DateTimeField()
-
-#     objects = TatmeenLocalManager()
-
-#     def save(self, *args, **kwargs):
-#         kwargs.setdefault('using', 'default')
-#         super(TempReceiveScanDetails, self).save(*args, **kwargs)
-
-#     def delete(self, *args, **kwargs):
-#         kwargs.setdefault('using', 'default')
-#         super(TempReceiveScanDetails, self).delete(*args, **kwargs)
-    
-#     class Meta:
-#         db_table = 'TempReceiveScanDetails'
-
-
-
 class pack_guid_map(models.Model):
     id = models.AutoField(primary_key=True)
     pk_guid = models.CharField(max_length=300, null=True, blank=True)
